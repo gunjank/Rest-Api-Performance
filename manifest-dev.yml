@@ -1,0 +1,7 @@
+inherit: manifest-base.yml
+applications:
+- name: restperformance-dev
+  host: restperformance-dev
+  env:
+   HOST_LCP: 'AD'
+   PROFILE_ACTIVE: cloud

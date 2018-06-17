@@ -1,0 +1,46 @@
+<form class="col-md-5">
+    <fieldset class="form-group">
+        <label for="serviceUrl">Request URL</label>
+        <input type="text" class="form-control" id="serviceUrl"
+        ng-model="serviceData.url"
+        placeholder="Request URL">
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="methodType">Method Type</label>
+        <select class="form-control" id="methodType" name="methodType"
+        ng-model="serviceData.methodType" >
+      <option selected="selected" >get</option>
+      <option>post</option>
+      <option>put</option>
+      <option>delete</option>
+    </select>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="headers">Headers</label>
+        <textarea class="form-control" id="headers" rows="3"  ng-model="serviceData.headers"
+         placeholder="{'Content-Type':'application/json'}"></textarea>
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="payloadData">Payload</label>
+        <textarea class="form-control" id="payloadData" rows="3" ng-model="serviceData.payloadData"
+         placeholder="N/A for GET"></textarea>
+    </fieldset>
+     <fieldset class="form-group">
+        <label for="iterations">Iterations</label>
+        <input type="number" class="form-control" id="iterations"
+        ng-model="serviceData.iterations" min="1"
+        placeholder="5">
+         <small class="text-muted">number of iterations to perform .</small>
+    </fieldset>
+     <fieldset class="form-group">
+        <label for="limit">Limit</label>
+        <input type="number" class="form-control" id="limit"
+        ng-model="serviceData.limit" min="1" 
+        placeholder="5" value="5">
+         <small class="text-muted">concurrent connections.</small>
+    </fieldset>
+    <button type="submit" data-ng-click="submitClick()" class="btn btn-primary">Submit</button>
+</form>
+<div class="col-md-3" data-ng-include="'html/legend.html'"></main>

@@ -1,0 +1,27 @@
+{
+  "name": "Restperformance",
+  "description": "A simple HAPI server based restful service performance testing tool",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "^0.10.x",
+    "npm": "^1.2.x"
+  },
+  "dependencies": {
+    "config-multipaas": "0.0.6",
+     "bench-rest": "^1.2.0",
+    "hapi": "^7.5.2"
+  },
+  "devDependencies": {
+    "tap": "^0.4.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gunjank/sample-json-viewer.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "CC0",
+  "main": "server.js"
+}
